@@ -1,0 +1,5 @@
+{
+  "name": "LAXMIRA – Clothing & Rental Studio",
+  "description": "Premium designer clothing store and rental studio in Phulera, Rajasthan. Specializing in sarees, suit sets, and bridal rentals.",
+  "requestFramePermissions": ["geolocation"]
+}
