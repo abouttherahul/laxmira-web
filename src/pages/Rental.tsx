@@ -60,11 +60,11 @@ export default function Rental() {
               </ul>
 
               <a
-                href="https://wa.me/8114402526"
+                href="https://wa.me/8079076815?text=Hello%20Laxmira%2C%20I%20am%20interested%20in%20renting%20the%20outfit%20named%20%22{product.name}%22.%20Could%20you%20please%20provide%20more%20details%3F"
                 className="inline-flex items-center space-x-2 bg-maroon text-white px-8 py-4 rounded-full font-medium hover:bg-wine transition-colors"
               >
                 <Calendar size={18} />
-                <span>Book Appointment</span>
+                <span>Book Dress</span>
               </a>
             </div>
           </div>

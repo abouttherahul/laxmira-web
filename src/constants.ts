@@ -15,7 +15,8 @@ export const PRODUCTS: Product[] = [
     category: 'Sarees',
     price: '₹4,999',
     image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800&auto=format&fit=crop',
-    description: 'Exquisite silk saree with gold zari border, perfect for weddings.'
+    description: 'Exquisite silk saree with gold zari border, perfect for weddings.',
+    isRental: true
   },
   {
     id: '2',
@@ -23,7 +24,8 @@ export const PRODUCTS: Product[] = [
     category: 'Suits',
     price: '₹3,499',
     image: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=800&auto=format&fit=crop',
-    description: 'Flowy Anarkali suit with intricate embroidery.'
+    description: 'Flowy Anarkali suit with intricate embroidery.',
+    isRental: true
   },
   {
     id: '3',
@@ -31,7 +33,8 @@ export const PRODUCTS: Product[] = [
     category: 'Kurtis',
     price: '₹1,299',
     image: 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=800&auto=format&fit=crop',
-    description: 'Comfortable and stylish daily wear cotton kurti.'
+    description: 'Comfortable and stylish daily wear cotton kurti.',
+    isRental: true
   },
   {
     id: '4',
@@ -39,14 +42,15 @@ export const PRODUCTS: Product[] = [
     category: 'Co-ords',
     price: '₹2,799',
     image: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?q=80&w=800&auto=format&fit=crop',
-    description: 'Chic wine-colored co-ord set for festive gatherings.'
+    description: 'Chic wine-colored co-ord set for festive gatherings.',
+    isRental: true
   },
   {
     id: '5',
-    name: 'Bridal Red Lehenga',
+    name: 'Bridal Designer Lehenga',
     category: 'Rentals',
     price: '₹5,000 / day',
-    image: 'https://images.unsplash.com/photo-1595910358793-78347989118d?q=80&w=800&auto=format&fit=crop',
+    image: 'uploads/lehennga-7.jpg',
     description: 'Heavy bridal lehenga with traditional handwork.',
     isRental: true
   },
@@ -61,23 +65,3 @@ export const PRODUCTS: Product[] = [
   }
 ];
 
-export const REVIEWS = [
-  {
-    id: '1',
-    name: 'Anjali Sharma',
-    rating: 5,
-    comment: 'Absolutely love the quality! The saree I bought for my sister\'s wedding was stunning.'
-  },
-  {
-    id: '2',
-    name: 'Priya Verma',
-    rating: 5,
-    comment: 'Best place for sarees & suits in Phulera. Highly recommended!'
-  },
-  {
-    id: '3',
-    name: 'Meena Gupta',
-    rating: 5,
-    comment: 'Great service and pricing. The rental process was very smooth.'
-  }
-];
