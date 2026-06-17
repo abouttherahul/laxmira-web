@@ -40,7 +40,7 @@ export default function Contact() {
               </div>
               <div className="p-8 bg-zinc-50 rounded-2xl">
                 <Clock className="text-maroon mb-4" size={32} />
-                <h3 className="font-serif text-xl mb-2">Store Hours</h3>
+                <h3 className="font-serif text-xl mb-2">Working Hours</h3>
                 <p className="text-sm text-zinc-600">
                   Open Daily: 9 AM - 9 PM
                 </p>
