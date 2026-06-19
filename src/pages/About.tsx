@@ -52,7 +52,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden">
                 <img
-                  src="uploads/lehenga.jpg"
+                  src="uploads/lehenga/lehenga.jpg"
                   alt="About Laxmira"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

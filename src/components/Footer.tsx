@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex flex-col mb-6">
-            <span className="text-3xl font-serif font-bold tracking-widest text-gold uppercase leading-none">
+            <span className="text-3xl font-serif tracking-widest text-gold uppercase leading-none">
               LAXMIRA
             </span>
             <span className="text-[10px] font-sans tracking-[0.1em] text-gold uppercase mt-1">

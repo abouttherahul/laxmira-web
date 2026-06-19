@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { PRODUCTS } from '@/src/constants';
-import { ShoppingBag } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const CATEGORIES = ['All', 'Sarees', 'Suits', 'Kurtis', 'Co-ords'];
 
@@ -44,22 +44,29 @@ export default function Shop() {
         {filteredProducts.map((product) => (
           <div key={product.id} className="group">
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl mb-4">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-              />
-              <button className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md text-maroon py-3 rounded-xl font-medium opacity-0 translate-y-4 transition-all group-hover:opacity-100 group-hover:translate-y-0 flex items-center justify-center space-x-2">
-                <ShoppingBag size={18} />
-                <span>Inquire Now</span>
-              </button>
+              <Link to={`/shop/${product.id}`} className="block h-full w-full">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                />
+              </Link>
+              <Link
+                to={`/shop/${product.id}`}
+                className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md text-maroon py-3 rounded-xl font-medium opacity-0 translate-y-4 transition-all group-hover:opacity-100 group-hover:translate-y-0 flex items-center justify-center space-x-2 hover:cursor-pointer"
+              >
+                <Eye size={18} />
+                <span>View Product</span>
+              </Link>
             </div>
             <div className="text-center">
-              <span className="text-[10px] uppercase tracking-widest text-zinc-400 font-bold mb-1 block">
+              <span className="text-[10px] text-gold uppercase tracking-widest font-bold mb-1 block">
                 {product.category}
               </span>
-              <h3 className="font-serif text-lg mb-1">{product.name}</h3>
+              <Link to={`/shop/${product.id}`} className="font-serif text-lg mb-1 inline-block hover:text-maroon transition">
+                {product.name}
+              </Link>
               <p className="text-maroon font-medium">{product.price}</p>
             </div>
           </div>

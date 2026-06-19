@@ -10,7 +10,7 @@ export default function Home() {
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="uploads/lehennga-7.jpg"
+            src="uploads/lehenga/lehenga-7.jpg"
             alt="Fashion Hero"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -74,9 +74,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { name: 'Designer Sarees', img: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=800&auto=format&fit=crop', link: '/shop?cat=Sarees' },
-            { name: 'Suit Sets', img: 'https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=800&auto=format&fit=crop', link: '/shop?cat=Suits' },
-            { name: 'Rental Studio', img: 'https://images.unsplash.com/photo-1733937140732-2cc70a1d7017?q=80&w=1287&auto=format&fit=crop', link: '/rental' },
+            { name: 'Sarees', img: '/uploads/saree/emerald-royale-embroidered-saree-2.png', link: '/shop?cat=Sarees' },
+            { name: 'Suit Sets', img: '/uploads/suits/yellow-drap-1.png', link: '/shop?cat=Suits' },
+            { name: 'Co-ord Sets', img: 'https://images.unsplash.com/photo-1733937140732-2cc70a1d7017?q=80&w=1287&auto=format&fit=crop', link: '/shop?cat=Co-ords' },
           ].map((cat, i) => (
             <Link
               key={i}
