@@ -1,10 +1,30 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Contact() {
   return (
     <div className="pt-32 pb-24">
+      <Helmet>
+        <title>Contact | LAXMIRA | Bridal Wear Studio in Rajasthan</title>
+        <meta
+          name="description"
+          content="Contact LAXMIRA in Phulera for designer clothing, bridal lehenga rental, wedding outfit rentals, gowns on rent and jewellery on rent in Rajasthan."
+        />
+        <meta
+          name="keywords"
+          content="Designer Clothing Studio in Phulera, Bridal Wear Studio in Rajasthan, Bridal Lehenga Rental Near Jaipur, Wedding Outfit Rental Studio, Gowns on Rent in Rajasthan, Designer Jewellery on Rent, Party Wear Lehenga Rental"
+        />
+        <meta property="og:title" content="Contact | LAXMIRA | Wedding Fashion Studio" />
+        <meta
+          property="og:description"
+          content="Reach out to LAXMIRA in Phulera for designer suits, bridal lehenga rentals, co-ord sets and wedding outfit rentals in Rajasthan."
+        />
+        <meta property="og:url" content="https://laxmira.net/contact" />
+        <meta name="twitter:url" content="https://laxmira.net/contact" />
+        <link rel="canonical" href="https://laxmira.net/contact" />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-serif mb-4">Contact Us</h1>
@@ -17,28 +37,28 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-12">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div className="p-8 bg-zinc-50 rounded-2xl">
+              <div className="p-8 bg-zinc-50 rounded-2xl shadow-xl">
                 <MapPin className="text-maroon mb-4" size={32} />
                 <h3 className="font-serif text-xl mb-2">Our Address</h3>
                 <p className="text-sm text-zinc-600 leading-relaxed">
                   G-13 & 12, Balaji Tower, Phulera, Rajasthan 303338
                 </p>
               </div>
-              <div className="p-8 bg-zinc-50 rounded-2xl">
+              <div className="p-8 bg-zinc-50 rounded-2xl shadow-xl">
                 <Phone className="text-maroon mb-4" size={32} />
                 <h3 className="font-serif text-xl mb-2">Call Us</h3>
                 <p className="text-sm text-zinc-600">
                   <Link className="hover:text-maroon" to="tel:+918079076815">+91 807 907 6815</Link>
                 </p>
               </div>
-              <div className="p-8 bg-zinc-50 rounded-2xl">
+              <div className="p-8 bg-zinc-50 rounded-2xl shadow-xl">
                 <Mail className="text-maroon mb-4" size={32} />
                 <h3 className="font-serif text-xl mb-2">Email Us</h3>
                 <p className="text-sm text-zinc-600">
                   <Link className="hover:text-maroon" to="mailto:wearlaxmira@gmail.com">wearlaxmira@gmail.com</Link>
                 </p>
               </div>
-              <div className="p-8 bg-zinc-50 rounded-2xl">
+              <div className="p-8 bg-zinc-50 rounded-2xl shadow-xl">
                 <Clock className="text-maroon mb-4" size={32} />
                 <h3 className="font-serif text-xl mb-2">Working Hours</h3>
                 <p className="text-sm text-zinc-600">

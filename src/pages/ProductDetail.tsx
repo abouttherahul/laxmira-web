@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useParams } from 'react-router-dom';
 import { PRODUCTS } from '@/src/constants';
 import { ShoppingBag, ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -42,8 +43,32 @@ export default function ProductDetail() {
   const prevImage = () => setActiveIndex((state) => (state === 0 ? images.length - 1 : state - 1));
   const nextImage = () => setActiveIndex((state) => (state === images.length - 1 ? 0 : state + 1));
 
+  const canonicalUrl = product ? `https://laxmira.net/shop/${product.id}` : 'https://laxmira.net/shop';
+
   return (
     <div className="pt-32 pb-24 px-6 max-w-6xl mx-auto">
+      {product && (
+        <Helmet>
+          <title>{`${product.name} | LAXMIRA | Designer Sarees & Bridal Rentals in Rajasthan`}</title>
+          <meta
+            name="description"
+            content={`${product.name} is available at LAXMIRA in Phulera. Rent or buy this designer ${product.category.toLowerCase()} for weddings, parties and festive events.`}
+          />
+          <meta
+            name="keywords"
+            content="Bridal Lehenga Rental Near Jaipur, Designer Sarees in Phulera, Gowns on Rent in Rajasthan, Designer Suits for Women, Wedding Outfit Rental Studio"
+          />
+          <meta property="og:title" content={`${product.name} | LAXMIRA`} />
+          <meta
+            property="og:description"
+            content={`Rent or shop the ${product.name} at LAXMIRA, the leading designer clothing and rental studio in Phulera.`}
+          />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta name="twitter:url" content={canonicalUrl} />
+          <meta property="og:image" content={`https://laxmira.net${product.image}`} />
+          <link rel="canonical" href={canonicalUrl} />
+        </Helmet>
+      )}
       <Link
         to="/shop"
         className="inline-flex items-center gap-2 text-sm font-medium text-maroon mb-10"

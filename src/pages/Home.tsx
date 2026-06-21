@@ -2,10 +2,30 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Home() {
   return (
     <div className="pt-20">
+      <Helmet>
+        <title>LAXMIRA | Designer Clothing & Rental Studio in Phulera</title>
+        <meta
+          name="description"
+          content="LAXMIRA is a designer clothing studio in Phulera offering designer sarees, bridal lehenga rental near Jaipur, party wear lehenga rental, gowns on rent in Rajasthan, co-ord sets for women and jewellery on rent."
+        />
+        <meta
+          name="keywords"
+          content="Designer Clothing Studio in Phulera, Bridal Lehenga Rental Near Jaipur, Lehenga on Rent in Rajasthan, Designer Sarees in Phulera, Wedding Outfit Rental Studio, Gowns on Rent in Rajasthan, Designer Jewellery on Rent, Bridal Wear Studio in Rajasthan, Party Wear Lehenga Rental, Designer Suits for Women, Co-Ord Sets for Women, Wedding Fashion Studio, Ethnic Wear Studio, Complete Wedding Look on Rent"
+        />
+        <meta property="og:title" content="LAXMIRA | Designer Clothing & Rental Studio in Phulera" />
+        <meta
+          property="og:description"
+          content="LAXMIRA is a wedding fashion studio in Phulera offering designer sarees, bridal lehengas, gowns, co-ord sets and jewellery for rent or purchase. Explore bridal and party-wear collections now."
+        />
+        <meta property="og:url" content="https://laxmira.net/" />
+        <meta name="twitter:url" content="https://laxmira.net/" />
+        <link rel="canonical" href="https://laxmira.net/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -33,7 +53,7 @@ export default function Home() {
               <span className="italic text-gold">Elegance</span>
             </h1>
             <p className="text-lg md:text-xl text-zinc-200 mb-10 font-light leading-relaxed">
-              Shop & Rent Premium Fashion. From designer sarees to bridal lehengas, discover the perfect outfit for every occasion.
+              Shop & rent premium fashion from designer sarees to bridal lehengas, gowns, co-ord sets and jewellery. Discover wedding outfit rental studio expertise in Phulera and Rajasthan for elegant bridal wear and party looks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -99,6 +119,44 @@ export default function Home() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Rental studio */}
+      <section className="relative py-24 px-6 overflow-hidden min-h-[600px] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/uploads/rental-studio.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif mb-4 text-white">Designer Fashion, Without the Designer Price</h2>
+            <p className="text-zinc-200 max-w-2xl mx-auto mb-8">
+              Bridal Lehengas • Gowns • Sarees • Indo-Western
+            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Link
+                to="/rental"
+                className="inline-block bg-maroon text-white px-8 py-4 rounded-full font-medium hover:bg-wine transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >Explore Rentals
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 

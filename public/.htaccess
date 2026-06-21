@@ -1,0 +1,7 @@
+# Redirect all requests to index.html so React Router can handle client-side routes
+RewriteEngine On
+
+# If the request is not for an existing file or directory, rewrite it to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L,QSA]
