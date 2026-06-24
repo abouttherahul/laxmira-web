@@ -8,6 +8,7 @@ export interface Product {
   description: string;
   features?: string[];
   isRental?: boolean;
+  color: string;
   note?: string[];
 }
 
@@ -17,6 +18,7 @@ export const PRODUCTS: Product[] = [
     name: 'EMERALD ROYALE EMBROIDERED SAREE',
     category: 'Sarees',
     price: '₹5,070',
+    color: 'Green',
     image: '/uploads/saree/emerald-royale-embroidered-saree-1.png',
     images: [
       '/uploads/saree/emerald-royale-embroidered-saree-1.png',
@@ -32,6 +34,7 @@ export const PRODUCTS: Product[] = [
     name: 'Lavender Vine Embroidered Suit Set',
     category: 'Suits',
     price: '₹2,599',
+    color: 'Purple',
     image: '/uploads/suits/lavender-vine-embroidered-suit-set-1.png',
     images: [
       '/uploads/suits/lavender-vine-embroidered-suit-set-1.png',
@@ -55,6 +58,7 @@ export const PRODUCTS: Product[] = [
     name: 'Ivory Peacock Elegance Saree',
     category: 'Sarees',
     price: '₹1,800 / day',
+    color: 'Ivory',
     image: '/uploads/saree/ivory-peacock-elegance-saree-1.png',
     images: [
       '/uploads/saree/ivory-peacock-elegance-saree-1.png',
@@ -77,6 +81,7 @@ export const PRODUCTS: Product[] = [
     name: 'Ruby Peacock Embroidered Palazzo Set',
     category: 'Suits',
     price: '₹1,200 / day',
+    color: 'Red',
     image: '/uploads/suits/rubby-peacock-embroidered-palazzo-set-1.png',
     images: [
       '/uploads/suits/rubby-peacock-embroidered-palazzo-set-1.png',
@@ -100,6 +105,7 @@ export const PRODUCTS: Product[] = [
     name: 'Blossom Garden Embroidered Lehenga Set',
     category: 'Rentals',
     price: '₹2,000 / day',
+    color: 'Ivory',
     image: '/uploads/lehenga/blossom-garden-embroidered-lehenga-set-1.png',
     images: [
       '/uploads/lehenga/blossom-garden-embroidered-lehenga-set-1.png',
@@ -122,6 +128,7 @@ export const PRODUCTS: Product[] = [
     name: 'Terracotta Lace Co-Ord Set',
     category: 'Co-ords',
     price: '₹1,199',
+    color: 'Terracotta',
     image: '/uploads/cords/terracotta-lace-co-ord-set-1.png',
     images: [
       '/uploads/cords/terracotta-lace-co-ord-set-1.png'
@@ -142,6 +149,7 @@ export const PRODUCTS: Product[] = [
     name: 'Sunlit Blossom Draped Skirt Set',
     category: 'Rentals',
     price: '₹900 / day',
+    color: 'Yellow',
     image: '/uploads/suits/yellow-drap-1.png',
     images: [
       '/uploads/suits/yellow-drap-1.png',
@@ -164,6 +172,7 @@ export const PRODUCTS: Product[] = [
     name: 'Sunshine Bloom Embroidered Saree',
     category: 'Sarees',
     price: '₹3,300',
+    color: 'Yellow',
     image: '/uploads/saree/sunshine-bloom-embroidered-saree-1.png',
     images: [
       '/uploads/saree/sunshine-bloom-embroidered-saree-1.png',
@@ -186,6 +195,7 @@ export const PRODUCTS: Product[] = [
     name: 'Amber Lace Co-Ord Set',
     category: 'Co-ords',
     price: '₹1,199',
+    color: 'Amber',
     image: '/uploads/cords/amber-lace-co-ord-set-1.png',
     images: [
       '/uploads/cords/amber-lace-co-ord-set-1.png',
@@ -208,6 +218,7 @@ export const PRODUCTS: Product[] = [
     name: 'Crimson Heritage Embroidered Suit Set',
     category: 'Suits',
     price: '₹3,150',
+    color: 'Red',
     image: '/uploads/suits/crimson-heritage-embroidered-suit-set-1.png',
     images: [
       '/uploads/suits/crimson-heritage-embroidered-suit-set-1.png',
@@ -230,6 +241,7 @@ export const PRODUCTS: Product[] = [
     name: 'Mint Grace Embroidered Co-Ord Set',
     category: 'Co-ords',
     price: '₹1,199',
+    color: 'Green',
     image: '/uploads/cords/mint-grace-embroidered-co-ord-set-1.png',
     images: [
       '/uploads/cords/mint-grace-embroidered-co-ord-set-1.png',
@@ -252,6 +264,7 @@ export const PRODUCTS: Product[] = [
     name: 'Blush Pearl Festive Suit Set',
     category: 'Suits',
     price: '₹1,000/day',
+    color: 'Pink',
     image: '/uploads/suits/blush-pearl-festive-suit-set-1.png',
     images: [
       '/uploads/suits/blush-pearl-festive-suit-set-1.png',
@@ -273,6 +286,7 @@ export const PRODUCTS: Product[] = [
     name: 'Celeste Ruffle Gown',
     category: 'Rentals',
     price: '₹2,000/day',
+    color: 'Green',
     image: '/uploads/gown/celeste-ruffle-lehenga-set-1.png',
     images: [
       '/uploads/gown/celeste-ruffle-lehenga-set-1.png',
@@ -295,6 +309,7 @@ export const PRODUCTS: Product[] = [
     name: 'Midnight Sapphire Layered Gown Set',
     category: 'Rentals',
     price: '₹2,000/day',
+    color: 'Blue',
     image: '/uploads/gown/midnight-sapphire-layered-gown-set-1.png',
     images: [
       '/uploads/gown/midnight-sapphire-layered-gown-set-1.png',
@@ -317,6 +332,7 @@ export const PRODUCTS: Product[] = [
     name: 'Sage Aura Cape Palazzo Set',
     category: 'Rentals',
     price: '₹1,000/day',
+    color: 'Green',
     image: '/uploads/suits/sage-aura-cape-palazzo-set-1.png',
     images: [
       '/uploads/suits/sage-aura-cape-palazzo-set-1.png',
@@ -339,6 +355,7 @@ export const PRODUCTS: Product[] = [
     name: 'Blush Stardust Sequin Lehenga Set',
     category: 'Rentals',
     price: '₹3,500/day',
+    color: 'Pink',
     image: '/uploads/lehenga/blush-stardust-sequin-lehenga-set-1.png',
     images: [
       '/uploads/lehenga/blush-stardust-sequin-lehenga-set-1.png',
@@ -361,6 +378,7 @@ export const PRODUCTS: Product[] = [
     name: 'Blush Royale Indo-Western Set',
     category: 'Rentals',
     price: '₹900/day',
+    color: 'Pink',
     image: '/uploads/suits/blush-royale-indo-western-set-1.png',
     images: [
       '/uploads/suits/blush-royale-indo-western-set-1.png',
@@ -383,6 +401,7 @@ export const PRODUCTS: Product[] = [
     name: 'Ivory Bloom Cape Lehenga Set',
     category: 'Rentals',
     price: '₹2,000/day',
+    color: 'Ivory',
     image: '/uploads/lehenga/ivory-bloom-cape-lehenga-set-1.png',
     images: [
       '/uploads/lehenga/ivory-bloom-cape-lehenga-set-1.png',
@@ -405,6 +424,7 @@ export const PRODUCTS: Product[] = [
     name: 'Rose Gold Shimmer Gown',
     category: 'Rentals',
     price: '₹2,500/day',
+    color: 'Pink',
     image: '/uploads/lehenga/rose-gold-shimmer-gown-1.png',
     images: [
       '/uploads/lehenga/rose-gold-shimmer-gown-1.png',
@@ -427,6 +447,7 @@ export const PRODUCTS: Product[] = [
     name: 'Heritage Peach Floral Lehenga Set',
     category: 'Rentals',
     price: '₹2,500/day',
+    color: 'Orange',
     image: '/uploads/lehenga/heritage-Peach-Floral-Lehenga-Set-1.png',
     images: [
       '/uploads/lehenga/heritage-Peach-Floral-Lehenga-Set-1.png',
@@ -449,6 +470,7 @@ export const PRODUCTS: Product[] = [
     name: 'Royal Violet Festive Lehenga',
     category: 'Rentals',
     price: '₹2,500/day',
+    color: 'Purple',
     image: '/uploads/lehenga/royal-violet-festive-lehenga-1.png',
     images: [
       '/uploads/lehenga/royal-violet-festive-lehenga-1.png',
@@ -469,7 +491,8 @@ export const PRODUCTS: Product[] = [
     id: '22',
     name: 'Champagne Stardust Mermaid Lehenga',
     category: 'Rentals',
-    price: '₹4,500/day',
+    price: '₹5,500/day',
+    color: 'Yellow',
     image: '/uploads/lehenga/champagne-stardust-mermaid-lehenga-1.png',
     images: [
       '/uploads/lehenga/champagne-stardust-mermaid-lehenga-1.png',
@@ -492,6 +515,7 @@ export const PRODUCTS: Product[] = [
     name: 'Sunset Rani Brocade Lehenga',
     category: 'Rentals',
     price: '₹4,000/day',
+    color: 'Orange',
     image: '/uploads/lehenga/sunset-rani-brocade-lehenga-1.png',
     images: [
       '/uploads/lehenga/sunset-rani-brocade-lehenga-1.png',
@@ -514,6 +538,7 @@ export const PRODUCTS: Product[] = [
     name: 'Lavender Regal Jacket Lehenga',
     category: 'Rentals',
     price: '₹2,000/day',
+    color: 'Purple',
     image: '/uploads/lehenga/lavender-regal-jacket-lehenga-1.png',
     images: [
       '/uploads/lehenga/lavender-regal-jacket-lehenga-1.png',
@@ -536,6 +561,7 @@ export const PRODUCTS: Product[] = [
     name: 'Champagne Éclat Lehenga',
     category: 'Rentals',
     price: '₹4,500/day',
+    color: 'Yellow',
     image: '/uploads/lehenga/champagne-eclat-lehenga-1.png',
     images: [
       '/uploads/lehenga/champagne-eclat-lehenga-1.png',
@@ -558,6 +584,7 @@ export const PRODUCTS: Product[] = [
     name: 'Emerald Royale Lehenga',
     category: 'Rentals',
     price: '₹3,500/day',
+    color: 'Green',
     image: '/uploads/lehenga/emerald-royale-lehenga-1.png',
     images: [
       '/uploads/lehenga/emerald-royale-lehenga-1.png',
@@ -580,6 +607,7 @@ export const PRODUCTS: Product[] = [
     name: 'Velvet Amethyst Lehenga',
     category: 'Rentals',
     price: '₹3,500/day',
+    color: 'Purple',
     image: '/uploads/lehenga/velvet-amethyst-lehenga-1.png',
     images: [
       '/uploads/lehenga/velvet-amethyst-lehenga-1.png',
@@ -597,6 +625,395 @@ export const PRODUCTS: Product[] = [
       'Ideal for wedding functions, receptions, sangeet, festive occasions, and evening celebrations'
     ],
     isRental: true
-  }
+  },
+   {
+    id: '28',
+    name: 'Blush Beige Floral Organza Saree',
+    category: 'Sarees',
+    price: '₹3,300',
+    color: 'Beige',
+    image: '/uploads/saree/blush-beige-floral-organza-saree-1.png',
+    images: [
+      '/uploads/saree/blush-beige-floral-organza-saree-1.png',
+      '/uploads/saree/blush-beige-floral-organza-saree-2.png',
+      '/uploads/saree/blush-beige-floral-organza-saree-3.png'
+    ],
+    description: 'A graceful blush beige saree crafted in sheer organza, adorned with delicate floral embroidery and intricate lace border detailing. The soft pastel tone and elegant craftsmanship create a timeless look that is perfect for daytime celebrations, festive gatherings, and sophisticated occasions.',
+    features: [
+      'Premium organza fabric with a lightweight and airy drape',
+      'Delicate floral embroidery with intricate threadwork detailing',
+      'Elegant scalloped lace border for a refined finish',
+      'Soft blush beige color offering timeless sophistication',
+      'Comfortable silhouette with graceful flow and movement',
+      'Ideal for festive occasions, daytime celebrations, parties, and family functions'
+    ],
+    isRental: false
+  },
+   {
+    id: '29',
+    name: 'Ruby Diamond Sequin Saree',
+    category: 'Sarees',
+    price: '₹5,590',
+    color: 'Red',
+    image: '/uploads/saree/ruby-diamond-sequin-saree-1.png',
+    images: [
+      '/uploads/saree/ruby-diamond-sequin-saree-1.png',
+      '/uploads/saree/ruby-diamond-sequin-saree-2.png',
+      '/uploads/saree/ruby-diamond-sequin-saree-3.png'
+    ],
+    description: 'A captivating ruby red silk saree adorned with shimmering diamond-pattern sequin embroidery and delicate lace border detailing. The rich silk drape combined with sparkling embellishments creates a graceful statement, making it a perfect choice for festive celebrations, wedding functions, receptions, and evening occasions.',
+    features: [
+      'Premium silk fabric with a luxurious and fluid drape',
+      'Elegant diamond-pattern sequin embroidery throughout',
+      'Intricate lace border detailing for a refined finish',
+      'Rich ruby red hue with radiant festive appeal',
+      'Lightweight construction for comfortable all-day wear',
+      'Ideal for weddings, receptions, festive celebrations, and parties',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '30',
+    name: 'Lilac Blossom Sequin Saree',
+    category: 'Sarees',
+    price: '₹5,590',
+    color: 'Purple',
+    image: '/uploads/saree/lilac-blossom-sequin-saree-1.png',
+    images: [
+      '/uploads/saree/lilac-blossom-sequin-saree-1.png',
+      '/uploads/saree/lilac-blossom-sequin-saree-2.png',
+      '/uploads/saree/lilac-blossom-sequin-saree-3.png'
+    ],
+    description: 'A graceful purple silk saree adorned with shimmering sequin lattice embroidery and intricate handcrafted border detailing. The soft lilac-purple hue combined with sparkling embellishments creates an elegant and contemporary festive look, perfect for receptions, cocktail evenings, engagement ceremonies, festive gatherings, and special celebrations.',
+    features: [
+      'Premium silk fabric with a soft, luxurious drape',
+      'All-over sequin lattice embroidery for a glamorous look',
+      'Intricate handcrafted embellished border detailing',
+      'Elegant purple shade with subtle shimmer finish',
+      'Lightweight and comfortable for extended wear',
+      'Ideal for receptions, cocktail parties, festive occasions, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '31',
+    name: 'Rose Gold Bloom Saree',
+    category: 'Sarees',
+    price: '₹5,590',
+    color: 'Pink',
+    image: '/uploads/saree/rose-gold-bloom-saree-1.png',
+    images: [
+      '/uploads/saree/rose-gold-bloom-saree-1.png',
+      '/uploads/saree/rose-gold-bloom-saree-2.png',
+      '/uploads/saree/rose-gold-bloom-saree-3.png'
+    ],
+    description: 'A stunning pink silk saree adorned with delicate floral embroidery and intricate rose gold embellishments throughout. The graceful drape, scalloped embroidered borders, and shimmering handcrafted details create a timeless festive look, making it an elegant choice for weddings, receptions, festive celebrations, and evening occasions.',
+    features: [
+      'Premium silk fabric with a soft and luxurious drape',
+      'Delicate floral embroidery with intricate rose gold embellishments',
+      'Elegant scalloped embroidered border detailing',
+      'Graceful pink hue with subtle festive shimmer',
+      'Lightweight and comfortable for extended wear',
+      'Ideal for weddings, receptions, festive occasions, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '32',
+    name: 'Emerald Grace Embroidered Saree',
+    category: 'Sarees',
+    price: '₹3,300',
+    color: 'Green',
+    image: '/uploads/saree/emerald-grace-embroidered-saree-1.png',
+    images: [
+      '/uploads/saree/emerald-grace-embroidered-saree-1.png',
+      '/uploads/saree/emerald-grace-embroidered-saree-2.png',
+      '/uploads/saree/emerald-grace-embroidered-saree-3.png'
+    ],
+    description: 'A luxurious green silk saree featuring intricate floral embroidery and elegant zari-inspired detailing along the borders and pallu. The vibrant emerald and lime green combination, paired with a graceful sheen, creates a regal festive look perfect for weddings, celebrations, traditional gatherings, and special occasions.',
+    features: [
+      'Premium silk fabric with a rich lustrous finish',
+      'Intricate floral embroidery on the border and pallu',
+      'Elegant zari-inspired detailing for a timeless appeal',
+      'Beautiful dual-tone green color combination',
+      'Lightweight and comfortable for extended wear',
+      'Ideal for weddings, festive occasions, cultural events, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '33',
+    name: 'Ruby Red Floral Embroidered Saree',
+    category: 'Sarees',
+    price: '₹3,300',
+    color: 'Red',
+    image: '/uploads/saree/ruby-red-floral-embroidered-saree-1.png',
+    images: [
+      '/uploads/saree/ruby-red-floral-embroidered-saree-1.png',
+      '/uploads/saree/ruby-red-floral-embroidered-saree-2.png'
+    ],
+    description: 'A luxurious red silk saree adorned with intricate floral embroidery and elegant zari-inspired detailing along the borders and pallu. The rich ruby red hue, combined with delicate handcrafted motifs and a lustrous silk finish, creates a timeless festive ensemble perfect for weddings, celebrations, traditional gatherings, and special occasions.',
+    features: [
+      'Premium silk fabric with a rich lustrous finish',
+      'Intricate floral embroidery on the border and pallu',
+      'Elegant zari-inspired detailing for a regal appeal',
+      'Rich ruby red color with timeless festive charm',
+      'Lightweight and comfortable for extended wear',
+      'Ideal for weddings, festive occasions, cultural events, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '34',
+    name: 'Turquoise Bird Motif Saree',
+    category: 'Sarees',
+    price: '₹3,800',
+    color: 'Green',
+    image: '/uploads/saree/turquoise-bird-motif-saree-1.png',
+    images: [
+      '/uploads/saree/turquoise-bird-motif-saree-1.png',
+      '/uploads/saree/turquoise-bird-motif-saree-2.png',
+      '/uploads/saree/turquoise-bird-motif-saree-3.png'
+    ],
+    description: 'A graceful green silk saree featuring exquisite bird-inspired motifs and intricate floral embroidery throughout. The refreshing turquoise and emerald green tones, paired with delicate zari-inspired detailing, create a sophisticated ethnic look perfect for festive celebrations, family functions, cultural gatherings, and special occasions.',
+   features: [
+      'Premium silk fabric with a rich and elegant sheen',
+      'Intricate bird and floral motif embroidery throughout',
+      'Beautiful embroidered border and pallu detailing',
+      'Refreshing green dual-tone color combination',
+      'Lightweight and comfortable for long hours of wear',
+      'Ideal for festive occasions, weddings, cultural events, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '35',
+    name: 'Rani Pink Bird Motif Saree',
+    category: 'Sarees',
+    price: '₹3,800',
+    color: 'Pink',
+    image: '/uploads/saree/ranipink-bird-motif-saree-1.png',
+    images: [
+      '/uploads/saree/ranipink-bird-motif-saree-1.png',
+      '/uploads/saree/ranipink-bird-motif-saree-2.png',
+      '/uploads/saree/ranipink-bird-motif-saree-3.png'
+    ],
+    description: 'A vibrant pink silk saree adorned with elegant bird-inspired motifs and intricate floral embroidery throughout. The rich rani pink hue, combined with ornate embroidered borders and delicate handcrafted detailing, creates a timeless festive ensemble perfect for weddings, celebrations, traditional gatherings, and special occasions.',
+   features: [
+      'Premium silk fabric with a rich lustrous finish',
+      'Intricate bird and floral motif embroidery throughout',
+      'Beautiful embroidered border and pallu detailing',
+      'Vibrant rani pink color with elegant festive appeal',
+      'Lightweight and comfortable for extended wear',
+      'Ideal for weddings, festive occasions, cultural events, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '36',
+    name: 'Mint Blossom Embroidered Saree',
+    category: 'Sarees',
+    price: '₹3,800',
+    color: 'Green',
+    image: '/uploads/saree/mint-blossom-embroidered-saree-1.png',
+    images: [
+      '/uploads/saree/mint-blossom-embroidered-saree-1.png',
+      '/uploads/saree/mint-blossom-embroidered-saree-2.png',
+      '/uploads/saree/mint-blossom-embroidered-saree-3.png'
+    ],
+    description: 'A graceful green silk saree featuring delicate floral embroidery and elegant handcrafted detailing throughout. The refreshing mint green and soft yellow dual-tone palette adds a contemporary charm, while the intricate embroidered border and floral motifs create a sophisticated festive look. Perfect for daytime celebrations, weddings, festive gatherings, and special occasions.',
+   features: [
+      'Premium silk fabric with a smooth lustrous finish',
+      'Elegant floral embroidery across the saree',
+      'Beautiful embroidered border and pallu detailing',
+      'Refreshing green dual-tone color palette',
+      'Lightweight and comfortable for all-day wear',
+      'Ideal for weddings, festive occasions, celebrations, and cultural events',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '37',
+    name: 'Royal Fuchsia Checkered Saree',
+    category: 'Sarees',
+    price: '₹2,899',
+    color: 'Pink',
+    image: '/uploads/saree/royal-fuchsia-checkered-saree-1.png',
+    images: [
+      '/uploads/saree/royal-fuchsia-checkered-saree-1.png',
+      '/uploads/saree/royal-fuchsia-checkered-saree-2.png',
+      '/uploads/saree/royal-fuchsia-checkered-saree-3.png'
+    ],
+    description: 'A striking pink silk saree adorned with an elegant checkered embroidery pattern and intricate floral motifs. The rich fuchsia hue combined with delicate handcrafted detailing creates a sophisticated festive look. Finished with decorative tassels on the pallu, this saree is perfect for weddings, festive celebrations, cultural gatherings, and special occasions.',
+   features: [
+      'Premium silk fabric with a luxurious sheen',
+      'Elegant checkered embroidery throughout the saree',
+      'Intricate floral motifs woven into the design',
+      'Beautiful tassel detailing on the pallu',
+      'Rich pink color with festive appeal',
+      'Comfortable drape with graceful fall',
+      'Ideal for weddings, festive occasions, parties, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '38',
+    name: 'Regal Amethyst Checkered Saree',
+    category: 'Sarees',
+    price: '₹2,899',
+    color: 'Purple',
+    image: '/uploads/saree/regal-amethyst-checkered-saree-1.png',
+    images: [
+      '/uploads/saree/regal-amethyst-checkered-saree-1.png',
+      '/uploads/saree/regal-amethyst-checkered-saree-2.png',
+      '/uploads/saree/regal-amethyst-checkered-saree-3.png'
+    ],
+    description: 'A luxurious purple silk saree featuring an elegant checkered embroidery pattern accented with delicate floral motifs. The rich amethyst tone paired with intricate zari-inspired detailing creates a graceful and festive silhouette. Finished with charming tassel accents on the pallu, this saree is an ideal choice for weddings, festive gatherings, receptions, and special celebrations.',
+   features: [
+    'Premium silk fabric with a rich lustrous finish',
+    'Elegant checkered embroidery design',
+    'Delicate floral motifs woven across the saree',
+    'Decorative tassel detailing on the pallu',
+    'Rich purple color with timeless appeal',
+    'Lightweight and comfortable drape',
+    'Perfect for festive occasions, weddings, and celebrations',
+    'Includes matching blouse fabric'
+  ],
+    isRental: false
+  },
+   {
+    id: '39',
+    name: 'Scarlet Heritage Banarasi Saree',
+    category: 'Sarees',
+    price: '₹2,250',
+    color: 'Red',
+    image: '/uploads/saree/scarlet-heritage-banarasi-saree-1.png',
+    images: [
+      '/uploads/saree/scarlet-heritage-banarasi-saree-1.png',
+      '/uploads/saree/scarlet-heritage-banarasi-saree-2.png',
+      '/uploads/saree/scarlet-heritage-banarasi-saree-3.png'
+    ],
+    description: 'A timeless red silk saree adorned with classic woven patterns, regal gold zari borders, and traditional checkered detailing on the pallu. The rich scarlet hue and heritage-inspired craftsmanship create an elegant festive look, making it perfect for weddings, cultural celebrations, festive occasions, and family gatherings.',
+   features: [
+      'Premium silk fabric with a luxurious sheen',
+      'Traditional Banarasi-inspired woven detailing',
+      'Rich gold zari border and pallu work',
+      'Elegant checkered motifs on the pallu',
+      'Classic red color with festive appeal',
+      'Graceful drape and comfortable wear',
+      'Perfect for weddings, festive occasions, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '40',
+    name: 'Crimson Lotus Border Saree',
+    category: 'Sarees',
+    price: '₹2,250',
+    color: 'Red',
+    image: '/uploads/saree/crimson-lotus-border-saree-1.png',
+    images: [
+      '/uploads/saree/crimson-lotus-border-saree-1.png',
+      '/uploads/saree/crimson-lotus-border-saree-2.png',
+      '/uploads/saree/crimson-lotus-border-saree-3.png'
+    ],
+    description: 'A graceful red silk saree highlighted with delicate gold motifs and an exquisite multicolor floral border inspired by traditional lotus patterns. The vibrant crimson shade paired with intricate craftsmanship creates a refined festive look, making it an ideal choice for weddings, festive celebrations, religious occasions, and cultural events.',
+   features: [
+      'Premium silk fabric with a rich lustrous finish',
+      'Elegant gold woven motifs throughout the saree',
+      'Intricate multicolor lotus-inspired border detailing',
+      'Traditional craftsmanship with timeless appeal',
+      'Vibrant red color perfect for festive occasions',
+      'Lightweight and comfortable drape',
+      'Ideal for weddings, festivals, and special celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '41',
+    name: 'Royal Wine Zari Saree',
+    category: 'Sarees',
+    price: '₹2,790',
+    color: 'Maroon',
+    image: '/uploads/saree/royal-wine-zari-saree-1.png',
+    images: [
+      '/uploads/saree/royal-wine-zari-saree-1.png',
+      '/uploads/saree/royal-wine-zari-saree-2.png',
+      '/uploads/saree/royal-wine-zari-saree-3.png'
+    ],
+    description: 'An elegant maroon silk saree adorned with intricate gold zari motifs and a richly detailed heritage-inspired border. The deep wine hue combined with traditional craftsmanship creates a regal and timeless appeal, making it perfect for weddings, festive occasions, cultural celebrations, and grand gatherings.',
+   features: [
+      'Premium silk fabric with a luxurious sheen',
+      'Intricate gold zari motifs across the saree',
+      'Richly embellished traditional border design',
+      'Elegant heritage-inspired craftsmanship',
+      'Deep maroon color with royal appeal',
+      'Soft and graceful drape',
+      'Perfect for weddings, festive occasions, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '42',
+    name: 'Royal Violet Temple Border Saree',
+    category: 'Sarees',
+    price: '₹2,250',
+    color: 'Purple',
+    image: '/uploads/saree/royal-violet-temple-border-saree-1.png',
+    images: [
+      '/uploads/saree/royal-violet-temple-border-saree-1.png',
+      '/uploads/saree/royal-violet-temple-border-saree-2.png',
+      '/uploads/saree/royal-violet-temple-border-saree-3.png'
+    ],
+    description: 'A regal purple silk saree featuring striking gold zari stripes and an intricately woven temple-inspired pallu. The rich violet hue paired with traditional craftsmanship creates a sophisticated ethnic look, perfect for festive celebrations, weddings, cultural events, and special occasions.',
+   features: [
+      'Premium silk fabric with a rich lustrous finish',
+      'Elegant gold zari striped pattern',
+      'Intricately woven temple-inspired pallu',
+      'Traditional handcrafted detailing',
+      'Rich purple color with royal appeal',
+      'Decorative tassel accents on the pallu',
+      'Perfect for weddings, festive occasions, and cultural celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
+   {
+    id: '43',
+    name: 'Ocean Mist Ombre Saree',
+    category: 'Sarees',
+    price: '₹2,499',
+    color: 'Blue',
+    image: '/uploads/saree/ocean-mist-ombre-saree-1.png',
+    images: [
+      '/uploads/saree/ocean-mist-ombre-saree-1.png',
+      '/uploads/saree/ocean-mist-ombre-saree-2.png',
+      '/uploads/saree/ocean-mist-ombre-saree-3.png'
+    ],
+    description: 'A graceful ombre silk saree blending refreshing shades of aqua green and sky blue, enhanced with delicate crystal-inspired embellishments arranged in elegant geometric patterns. The soft gradient effect and lightweight drape create a modern yet sophisticated look, making it perfect for cocktail parties, festive celebrations, receptions, and special occasions.',
+   features: [
+      'Premium silk fabric with a smooth luxurious finish',
+      'Elegant ombre design in blue and green tones',
+      'Delicate crystal-inspired geometric embellishments',
+      'Lightweight and fluid drape',
+      'Modern contemporary aesthetic',
+      'Subtle shimmer detailing for festive appeal',
+      'Perfect for parties, receptions, festive occasions, and celebrations',
+      'Includes matching blouse fabric'
+    ],
+    isRental: false
+  },
 ];
 

@@ -25,11 +25,11 @@ export default function About() {
           content="Explore LAXMIRA – a designer clothing and rental studio in Phulera offering bridal wear, wedding outfit rentals, designer sarees, gowns, co-ord sets and jewellery for special occasions."
         />
 
-        <meta property="og:url" content="https://laxmira.net/about-laxmira" />
+        <meta property="og:url" content="https://laxmira.net/about" />
 
         <meta property="og:type" content="website" />
 
-        <meta property="og:image" content="https://laxmira.com/images/og-about.jpg" />
+        <meta property="og:image" content="https://laxmira.net/uploads/lehenga/lehenga.jpg" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -38,10 +38,10 @@ export default function About() {
           name="twitter:description"
           content="Premium women’s fashion & rental studio in Phulera. Discover sarees, lehengas, gowns & more at LAXMIRA."
         />
-        <meta name="twitter:image" content="https://laxmira.com/images/og-about.jpg" />
+        <meta name="twitter:image" content="https://laxmira.net/uploads/lehenga/lehenga.jpg" />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://laxmira.com/about-laxmira" />
+        <link rel="canonical" href="https://laxmira.net/about" />
       </Helmet>
       <div className="pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-6">
@@ -64,11 +64,11 @@ export default function About() {
             <div>
               <span className="text-maroon font-bold text-xs uppercase tracking-widest mb-4 block">About LAXMIRA</span>
               <h1 className="text-5xl font-serif mb-8 leading-tight">The Journey of <br /><span className="text-maroon">LAXMIRA</span></h1>
-              <p className="text-zinc-600 mb-6 leading-relaxed">
+              <p className="text-zinc-500 mb-6 leading-relaxed">
                 At LAXMIRA, we believe fashion is more than clothing — it’s an expression of confidence, culture, and individuality.</p>
-              <p className="text-zinc-600 mb-8 leading-relaxed">
+              <p className="text-zinc-500 mb-8 leading-relaxed">
                 Based in Phulera, Rajasthan, LAXMIRA is a women-led designer clothing and rental studio offering premium women’s clothing, bridal lehenga rental near Jaipur, gowns on rent in Rajasthan and jewellery rentals. From festive celebrations to weddings and everyday elegance, we curate styles that make you stand out effortlessly.</p>
-              <p className="text-zinc-600 mb-8 leading-relaxed">Our goal is simple — to bring you high-quality, designer-inspired outfits at affordable prices, without compromising on comfort or style.</p>
+              <p className="text-zinc-500 mb-8 leading-relaxed">Our goal is simple — to bring you high-quality, designer-inspired outfits at affordable prices, without compromising on comfort or style.</p>
 
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function About() {
                     <div className="text-3xl">{value.img}</div>
                   </div>
                   <h3 className="font-serif text-xl mb-4">{value.title}</h3>
-                  <p className="text-zinc-500 text-sm leading-relaxed">{value.desc}</p>
+                  <p className="text-zinc-500 text-md leading-relaxed">{value.desc}</p>
                 </div>
               ))}
             </div>
@@ -106,10 +106,10 @@ export default function About() {
             <div className="bg-zinc-50 rounded-[3rem] md:p-20 p-12 shadow-xl">
               <div>
                 <h2 className="text-2xl font-serif mb-4">👗 Our Signature Collections</h2>
-                <p className="text-zinc-600 mb-6 leading-relaxed text-sm">
+                <p className="text-zinc-600 mb-6 leading-relaxed text-md">
                   We offer a wide range of women’s ethnic and western wear, including:
                 </p>
-                <ul className="list-disc list-inside text-zinc-600 space-y-2 text-sm">
+                <ul className="list-disc list-inside text-zinc-500 space-y-2 text-md">
                   <li><b >Sarees</b> – Elegant, timeless, and perfect for festive wear</li>
                   <li><b>Suit</b> – Comfortable and stylish for daily and occasion wear</li>
                   <li><b>Kurtis</b> – Simple, versatile, and trendy</li>
@@ -123,7 +123,7 @@ export default function About() {
             <div className="bg-zinc-50 rounded-[3rem] md:p-20 p-12 shadow-xl">
               <div>
                 <h2 className="text-2xl font-serif mb-4">🌟 Features That Set Us Apart</h2>
-                <ul className="list-disc list-inside text-zinc-600 space-y-2 text-sm">
+                <ul className="list-disc list-inside text-zinc-500 space-y-2 text-md">
                   <li>Premium silk, cotton, georgette & blended fabrics</li>
                   <li>Handwork, embroidery, gota patti & mirror detailing</li>
                   <li>Comfortable fits with flattering silhouettes</li>

@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Nanum+Gothic&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Nanum+Gothic&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Emilys+Candy&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Nanum Gothic", sans-serif;
+  --font-sans: "Emilys Candy", serif;
   --font-serif: "Cinzel Decorative", serif;
 
   --color-maroon: #800000;

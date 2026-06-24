@@ -78,50 +78,53 @@ export default function ProductDetail() {
       </Link>
 
       <div className="grid grid-cols-1 lg:grid-cols-[40%_60%] gap-12 items-start">
-        <div className="rounded-[2rem] overflow-hidden shadow-2xl bg-zinc-900 lg:sticky lg:top-32 lg:h-fit">
-          <div className="relative overflow-hidden rounded-t-[2rem]">
-            <img
-              src={activeImage}
-              alt={product.name}
-              className="w-full  object-cover"
-              referrerPolicy="no-referrer"
-            />
+        <div className="lg:sticky lg:top-32 lg:h-fit">
+          <div className="rounded-[2rem] overflow-hidden shadow-2xl bg-zinc-900 lg:sticky lg:top-32 lg:h-fit">
+            <div className="relative overflow-hidden rounded-t-[2rem]">
+              <img
+                src={activeImage}
+                alt={product.name}
+                className="w-full  object-cover"
+                referrerPolicy="no-referrer"
+              />
 
-            <button
-              type="button"
-              onClick={prevImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-zinc-900 shadow-md hover:bg-white"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              type="button"
-              onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-zinc-900 shadow-md hover:bg-white"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-4 gap-3 p-4 bg-white rounded-b-[2rem]">
-            {images.map((src, index) => (
               <button
-                key={src + index}
                 type="button"
-                onClick={() => setActiveIndex(index)}
-                className={`overflow-hidden rounded border transition ${
-                  activeIndex === index ? 'border-maroon' : 'border-transparent'
-                }`}
+                onClick={prevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-zinc-900 shadow-md hover:bg-white"
               >
-                <img
-                  src={src}
-                  alt={`${product.name} ${index + 1}`}
-                  className="h-20 w-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
+                <ChevronLeft size={20} />
               </button>
-            ))}
+              <button
+                type="button"
+                onClick={nextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-3 text-zinc-900 shadow-md hover:bg-white"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+
+            <div className="grid grid-cols-4 gap-3 p-4 bg-white rounded-b-[2rem]">
+              {images.map((src, index) => (
+                <button
+                  key={src + index}
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  className={`overflow-hidden rounded border transition ${
+                    activeIndex === index ? 'border-maroon' : 'border-transparent'
+                  }`}
+                >
+                  <img
+                    src={src}
+                    alt={`${product.name} ${index + 1}`}
+                    className="h-20 w-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </button>
+              ))}
+            </div>
           </div>
+         
         </div>
 
         <div className="space-y-8">

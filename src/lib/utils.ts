@@ -4,17 +4,34 @@ import type { Product } from "@/src/constants";
 
 const COLOR_KEYWORDS: Array<{ color: string; matches: string[] }> = [
   { color: 'Ivory', matches: ['ivory', 'cream', 'beige', 'off white', 'white'] },
-  { color: 'Yellow', matches: ['yellow', 'sunshine', 'gold'] },
-  { color: 'Green', matches: ['emerald', 'green', 'mint'] },
-  { color: 'Purple', matches: ['lavender', 'purple'] },
+  { color: 'Yellow', matches: ['yellow', 'sunshine', 'gold', 'champagne'] },
+  { color: 'Green', matches: ['emerald', 'green', 'mint', 'sage'] },
+  { color: 'Purple', matches: ['lavender', 'purple', 'violet', 'amethyst'] },
   { color: 'Red', matches: ['ruby', 'crimson', 'red', 'maroon'] },
-  { color: 'Pink', matches: ['blush', 'pink', 'rose'] },
+  { color: 'Pink', matches: ['blush', 'pink', 'rose', 'pearl'] },
   { color: 'Terracotta', matches: ['terracotta'] },
   { color: 'Amber', matches: ['amber'] },
-  { color: 'Blue', matches: ['blue'] },
-  { color: 'Orange', matches: ['orange'] },
+  { color: 'Blue', matches: ['blue', 'sapphire'] },
+  { color: 'Orange', matches: ['orange', 'peach'] },
+  { color: 'Beige', matches: ['beige', 'nude', 'champagne'] },
   { color: 'Other', matches: [] },
 ];
+
+export const COLOR_HEX_MAP: Record<string, string> = {
+  All: '#f8fafc',
+  Ivory: '#f8f1e5',
+  Yellow: '#facc15',
+  Green: '#16a34a',
+  Purple: '#7c3aed',
+  Red: '#dc2626',
+  Pink: '#ec4899',
+  Terracotta: '#d98d6b',
+  Amber: '#f59e0b',
+  Blue: '#2563eb',
+  Orange: '#f97316',
+  Beige: '#d6b98d',
+  Other: '#94a3b8',
+};
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -26,6 +43,11 @@ export function parseProductPrice(price: string) {
 }
 
 export function getProductColor(product: Product) {
+  const explicitColor = product.color?.trim();
+  if (explicitColor) {
+    return explicitColor;
+  }
+
   const name = product.name.toLowerCase();
 
   for (const keyword of COLOR_KEYWORDS) {
@@ -38,7 +60,15 @@ export function getProductColor(product: Product) {
 }
 
 export function getAvailableColors(products: Product[]) {
-  return ['All', ...Array.from(new Set(products.map(getProductColor).filter((color) => color !== 'Other')))].sort();
+  const colors = Array.from(
+    new Set(
+      products
+        .map((product) => getProductColor(product))
+        .filter((color) => color && color !== 'Other')
+    )
+  ).sort();
+
+  return ['All', ...colors];
 }
 
 export function getPriceRangeOptions() {

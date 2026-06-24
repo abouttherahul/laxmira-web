@@ -4,6 +4,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { PRODUCTS } from '@/src/constants';
 import { Eye } from 'lucide-react';
 import {
+  COLOR_HEX_MAP,
   getAvailableColors,
   getPriceRangeOptions,
   getProductColor,
@@ -87,76 +88,117 @@ export default function Shop() {
         ))}
       </div>
 
-        <div className="flex justify-end mb-4">
+      
+        <div className="bg-zinc-50 rounded-[2rem] p-6 mb-10">
+
+  <div className="flex items-center justify-between mb-6">
+    <h3 className="text-lg font-serif">
+      Filter Collection
+    </h3>
+
+    <button
+      onClick={() => {
+        setSort('newest');
+        setColorFilter('All');
+        setPriceFilter('All');
+        setSearchParams({});
+      }}
+      className="text-sm text-maroon font-medium hover:underline"
+    >
+      Clear All
+    </button>
+  </div>
+
+  <div className="grid gap-5 lg:grid-cols-[1fr_1fr_auto] items-center">
+
+    {/* Sort */}
+    <div className="flex items-center gap-3 bg-white rounded-2xl px-5 py-4 shadow-sm">
+      <label htmlFor="sort" className="text-sm text-zinc-600">
+        Sort
+      </label>
+
+      <select
+        id="sort"
+        value={sort}
+        onChange={(e) => setSort(e.target.value)}
+        className="w-full bg-transparent outline-none text-sm"
+      >
+        {getSortOptions().map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    {/* Price */}
+    <div className="flex items-center gap-3 bg-white rounded-2xl px-5 py-4 shadow-sm">
+      <label htmlFor="price" className="text-sm text-zinc-600">
+        Price
+      </label>
+
+      <select
+        id="price"
+        value={priceFilter}
+        onChange={(e) => setPriceFilter(e.target.value)}
+        className="w-full bg-transparent outline-none text-sm"
+      >
+        {getPriceRangeOptions().map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    {/* Colors */}
+    <div className="flex flex-wrap gap-3">
+      {availableColors.map((color) => (
         <button
-          onClick={() => {
-            setSort('newest');
-            setColorFilter('All');
-            setPriceFilter('All');
-            setSearchParams({});
-          }}
-          className="px-4 py-2 rounded-full bg-zinc-100 hover:bg-zinc-200 text-sm font-medium"
+          key={color}
+          type="button"
+          onClick={() => setColorFilter(color)}
+          aria-label={color}
+          title={color}
+          className={`relative transition-all duration-300 ${
+            colorFilter === color
+              ? 'scale-110'
+              : 'hover:scale-105'
+          }`}
         >
-          Clear filters
+          {color === 'All' ? (
+            <div
+              className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium border-2 ${
+                colorFilter === 'All'
+                  ? 'bg-maroon text-white border-maroon shadow-lg'
+                  : 'bg-white border-zinc-300 text-zinc-600'
+              }`}
+            >
+              ✓
+            </div>
+          ) : (
+            <div
+              className={`w-10 h-10 rounded-full transition-all duration-300 ${
+                colorFilter === color
+                  ? 'ring-4 ring-maroon/20 shadow-lg'
+                  : 'shadow-md hover:shadow-lg'
+              }`}
+              style={{
+                backgroundColor:
+                  COLOR_HEX_MAP[color] || '#94a3b8',
+                border:
+                  colorFilter === color
+                    ? '2px solid #800000'
+                    : '2px solid #ffffff',
+              }}
+            />
+          )}
         </button>
-      </div>
+      ))}
+    </div>
 
-      <div className="grid gap-4 lg:grid-cols-3 mb-12">
-        <div className="flex items-center gap-3 bg-zinc-50 rounded-3xl px-4 py-3">
-          <label htmlFor="sort" className="text-sm text-zinc-600 w-24">
-            Sort by
-          </label>
-          <select
-            id="sort"
-            value={sort}
-            onChange={(e) => setSort(e.target.value)}
-            className="w-full rounded-2xl border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700"
-          >
-            {getSortOptions().map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="flex items-center gap-3 bg-zinc-50 rounded-3xl px-4 py-3">
-          <label htmlFor="color" className="text-sm text-zinc-600 w-24">
-            Color
-          </label>
-          <select
-            id="color"
-            value={colorFilter}
-            onChange={(e) => setColorFilter(e.target.value)}
-            className="w-full rounded-2xl border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700"
-          >
-            {availableColors.map((color) => (
-              <option key={color} value={color}>
-                {color}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="flex items-center gap-3 bg-zinc-50 rounded-3xl px-4 py-3">
-          <label htmlFor="price" className="text-sm text-zinc-600 w-24">
-            Price
-          </label>
-          <select
-            id="price"
-            value={priceFilter}
-            onChange={(e) => setPriceFilter(e.target.value)}
-            className="w-full rounded-2xl border border-zinc-200 bg-white px-4 py-2 text-sm text-zinc-700"
-          >
-            {getPriceRangeOptions().map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
-        </div>
-
-      </div>
+  </div>
+</div>
 
       
 

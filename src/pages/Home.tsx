@@ -26,11 +26,12 @@ export default function Home() {
         <meta name="twitter:url" content="https://laxmira.net/" />
         <link rel="canonical" href="https://laxmira.net/" />
       </Helmet>
+      
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="uploads/lehenga/lehenga-7.jpg"
+            src="uploads/hero-main.jpg"
             alt="Fashion Hero"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -48,7 +49,7 @@ export default function Home() {
             <span className="inline-block px-4 py-1 bg-gold/20 backdrop-blur-md border border-gold/30 rounded-full text-gold text-xs font-semibold tracking-widest uppercase mb-6">
               New Collection 2026
             </span>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6">
+            <h1 className="text-5xl md:text-8xl font-serif font-bold leading-tight mb-6">
               Where Style Meets <br />
               <span className="italic text-gold">Elegance</span>
             </h1>
@@ -96,7 +97,7 @@ export default function Home() {
           {[
             { name: 'Sarees', img: '/uploads/saree/emerald-royale-embroidered-saree-2.png', link: '/shop?cat=Sarees' },
             { name: 'Suit Sets', img: '/uploads/suits/yellow-drap-1.png', link: '/shop?cat=Suits' },
-            { name: 'Co-ord Sets', img: 'https://images.unsplash.com/photo-1733937140732-2cc70a1d7017?q=80&w=1287&auto=format&fit=crop', link: '/shop?cat=Co-ords' },
+            { name: 'Co-ord Sets', img: '/uploads/cords/mint-grace-embroidered-co-ord-set-3.png', link: '/shop?cat=Co-ords' },
           ].map((cat, i) => (
             <Link
               key={i}
@@ -111,8 +112,8 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="text-2xl font-serif mb-2">{cat.name}</h3>
-                <span className="text-sm font-medium text-gold flex items-center space-x-2">
+                <h3 className="text-3xl font-serif mb-2">{cat.name}</h3>
+                <span className="text-lg font-medium text-gold flex items-center space-x-2">
                   <span>View More</span>
                   <ArrowRight size={14} />
                 </span>
@@ -141,7 +142,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif mb-4 text-white">Designer Fashion, Without the Designer Price</h2>
-            <p className="text-zinc-200 max-w-2xl mx-auto mb-8">
+            <p className="text-white max-w-2xl mx-auto text-2xl mb-8">
               Bridal Lehengas • Gowns • Sarees • Indo-Western
             </p>
             <motion.div

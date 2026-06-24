@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex flex-col">
-          <span className="text-3xl font-serif tracking-widest text-dark uppercase leading-none">LAXMIRA</span><span className="text-[10px] font-sans tracking-[0.1em] text-maroon uppercase mt-1">Clothing | Rental Studio</span>
+          <span className="text-4xl font-serif tracking-widest text-dark uppercase leading-none">LAXMIRA</span><span className="text-[10px] font-sans tracking-[0.1em] text-maroon uppercase mt-1">Clothing | Rental Studio</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -42,7 +42,7 @@ export default function Navbar() {
               key={link.path}
               to={link.path}
               className={cn(
-                'text-sm font-medium tracking-wide transition-colors hover:text-maroon',
+                'text-lg font-medium tracking-wide transition-colors hover:text-maroon',
                 location.pathname === link.path ? 'text-maroon' : 'text-dark'
               )}
             >
