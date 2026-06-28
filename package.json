@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "catalog": "tsx scripts/generate-catalog.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
@@ -34,7 +35,7 @@
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.21",
     "tailwindcss": "^4.1.14",
-    "tsx": "^4.21.0",
+    "tsx": "^4.22.4",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
   }
